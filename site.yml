@@ -1,0 +1,32 @@
+---
+- name: Configurar servidor web con Nginx
+  hosts: webservers
+  become: yes
+
+  tasks:
+
+    - name: Actualizar paquetes
+      apt:
+        update_cache: yes
+
+    - name: Instalar Nginx
+      apt:
+        name: nginx
+        state: present
+
+    - name: Crear archivo HTML personalizado
+      copy:
+        dest: /var/www/html/index.html
+        content: |
+          <!DOCTYPE html>
+          <html lang="es">
+          <head>
+            <meta charset="UTF-8">
+            <title>Servidor Web Automatizado con Ansible</title>
+          </head>
+          <body>
+            <h1>Servidor desplegado con Ansible</h1>
+            <p>Alumno: Gabriel Arias – ITLA</p>
+            <p>Fecha: {{ ansible_date_time.date }} {{ ansible_date_time.time }}</p>
+          </body>
+          </html>
