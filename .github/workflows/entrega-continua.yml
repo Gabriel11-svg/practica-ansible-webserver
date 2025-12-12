@@ -1,7 +1,7 @@
 on:
   push:
     branches:
-      - master
+      - Master
 
 env:
   IMAGE_NAME: 20230918/practica-ansible-webserver
