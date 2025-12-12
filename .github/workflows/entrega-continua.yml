@@ -1,9 +1,7 @@
-name: CI Docker Hub
-
 on:
   push:
     branches:
-      - maestro
+      - master
 
 env:
   IMAGE_NAME: 20230918/practica-ansible-webserver
