@@ -5,7 +5,7 @@ on:
     branches: [ "master" ]
 
 env:
-  IMAGE_NAME: gabriel11-svg/practica-ansible-webserver
+  IMAGE_NAME: 20230918/practica-ansible-webserver
   IMAGE_TAG: latest
 
 jobs:
